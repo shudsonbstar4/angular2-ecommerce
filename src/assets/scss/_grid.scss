@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.grid--row {
+  display: flex;
+  flex-wrap: row wrap;
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  flex: 1;
+  margin: 10px;
+}
+
+.col-2 {
+  @extend .col;
+  flex: none;
+  width: 20%;
+}
+
+.col-4 {
+  @extend .col;
+  flex: none;
+  width: 25%;
+}
+
+.col-10 {
+  @extend .col;
+  flex: none;
+  width: 80%;
+}

@@ -1,0 +1,9 @@
+.list {
+  &--unstyled {
+    list-style-type: none;
+
+    li {
+      text-indent: 0;
+    }
+  }
+}

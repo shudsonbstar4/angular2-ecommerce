@@ -1,0 +1,5 @@
+<ul class="list--unstyled grid--row">
+  <li class="col-4" *ngFor="let product of products">
+    <app-card [card]="product" [buttons]="productButtons"></app-card>
+  </li>
+</ul>
