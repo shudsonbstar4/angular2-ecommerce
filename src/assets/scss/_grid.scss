@@ -1,3 +1,5 @@
+@import './variables';
+
 .container {
   display: flex;
   margin: 0 auto;
@@ -6,30 +8,42 @@
 
 .grid--row {
   display: flex;
-  flex-wrap: row wrap;
-  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .col {
   display: flex;
   flex: 1;
-  margin: 10px;
+  padding: 10px;
 }
 
 .col-2 {
   @extend .col;
   flex: none;
-  width: 20%;
+  width: 100%;
+
+  @media(min-width: $screen-size-sm) {
+    width: 20%;
+  }
 }
 
 .col-4 {
   @extend .col;
   flex: none;
-  width: 25%;
+  width: 100%;
+
+  @media(min-width: $screen-size-sm) {
+    width: 25%;
+  }
 }
 
 .col-10 {
   @extend .col;
   flex: none;
-  width: 80%;
+  width: 100%;
+
+  @media(min-width: $screen-size-sm) {
+    width: 80%;
+  }
 }

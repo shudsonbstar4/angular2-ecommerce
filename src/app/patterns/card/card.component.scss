@@ -1,7 +1,13 @@
 .card {
   box-shadow: 1px 1px 10px lightgray;
+  padding: 10px;
+  text-align: center;
 
   img {
     width: 100%;
+  }
+
+  &--footer {
+    padding: 10px;
   }
 }
