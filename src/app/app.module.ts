@@ -1,27 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppRouting } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { HomeModule } from './modules/home/home.module';
 import { ProductsModule } from './modules/products/products.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
     ComponentsModule,
     FormsModule,
     ReactiveFormsModule,
     HomeModule,
-    HttpModule,
     ProductsModule,
-    AppRouting
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { Http } from '@angular/http';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private http: Http,
+    private http: HttpClient,
   ) { }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   handleError(error) {
-
+    console.log('error is', error);
   }
 
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import 'rxjs/add/operator/debounceTime';
+import { debounceTime } from  'rxjs/operators';
 
 @Component({
   selector: 'app-form-control',
@@ -15,12 +15,14 @@ export class FormControlComponent implements OnInit {
 
   ngOnInit() {
     this.searchControl.valueChanges
-      .debounceTime(500)
+      .pipe(
+        debounceTime(500)
+      )
       .subscribe(
         (searchTerm) => {
           this.query.emit(searchTerm);
         }
-      )
+      );
   }
 
 }

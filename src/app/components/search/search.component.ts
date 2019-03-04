@@ -15,4 +15,5 @@ export class SearchComponent implements OnInit {
   search($event) {
     console.log('search is ', $event);
   }
+
 }

@@ -4,11 +4,13 @@ import { HomeComponent } from './home.component';
 import { ComponentsModule } from './../../components/components.module';
 
 @NgModule({
+  declarations: [
+    HomeComponent
+  ],
   imports: [
     CommonModule,
     ComponentsModule
   ],
-  declarations: [HomeComponent],
   exports: [
     HomeComponent
   ]
